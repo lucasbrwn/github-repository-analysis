@@ -1,80 +1,52 @@
-GitHub Repository Analysis
+# GitHub Repository Analysis
 
-Exploratory data analysis of GitHub repository data using Python, Pandas, and Matplotlib.
+Exploratory data analysis of GitHub repository data using Python, Pandas, and Matplotlib.  
 This project analyzes repository engagement, programming language trends, and the performance difference between Python loops and vectorized operations.
 
-Overview
+---
+
+## Overview
 
 This project performs exploratory data analysis (EDA) on a dataset of GitHub repositories. The analysis includes:
 
-Data cleaning and preprocessing
+- Data cleaning and preprocessing
+- Handling missing values
+- Filtering invalid records
+- Computing a forks-to-stars engagement metric
+- Comparing Python loops vs Pandas/NumPy vectorization
+- Analyzing programming language popularity
+- Identifying AI-related repositories
+- Visualizing trends using Matplotlib
 
-Handling missing values
+---
 
-Filtering invalid records
-
-Computing a forks-to-stars engagement metric
-
-Comparing Python loops vs Pandas/NumPy vectorization
-
-Analyzing programming language popularity
-
-Identifying AI-related repositories
-
-Visualizing trends using Matplotlib
-
-Dataset
+## Dataset
 
 This project expects a CSV file located at:
-
 data/github_repos.csv
 
-The dataset is not included in this repository.
 
-Required columns
+The dataset is **not included** in this repository.
 
-Language
+**Required columns:**
+- Language
+- Stars
+- Forks
+- Description
 
-Stars
+---
 
-Forks
+## How to Run
 
-Description
+### 1) Install dependencies
 
-How to Run
-1. Install dependencies
+```bash
 pip install -r requirements.txt
-2. Place the dataset
 
+### 2) Place the dataset
 Put your CSV file in:
-
 data/github_repos.csv
-3. Run the analysis
+
+### 3) Run the analysis
+```bash
 python src/github_analysis.py
-Output
-
-The script will:
-
-Print dataset summary information
-
-Compare execution time between Python loops and vectorized operations
-
-Generate visualizations:
-
-Top programming languages by frequency
-
-Average stars by language
-
-AI vs non-AI popularity
-
-Stars vs Forks scatter plot (log scale)
-
-Tech Stack
-
-Python
-
-Pandas
-
-NumPy
-
-Matplotlib

@@ -1,6 +1,6 @@
 # GitHub Repository Analysis
 
-Exploratory data analysis of GitHub repository data using Python, Pandas, and Matplotlib.  
+Exploratory data analysis of GitHub repository data using Python, Pandas, and Matplotlib.
 This project analyzes repository engagement, programming language trends, and the performance difference between Python loops and vectorized operations.
 
 ---
@@ -9,30 +9,33 @@ This project analyzes repository engagement, programming language trends, and th
 
 This project performs exploratory data analysis (EDA) on a dataset of GitHub repositories. The analysis includes:
 
-- Data cleaning and preprocessing
-- Handling missing values
-- Filtering invalid records
-- Computing a forks-to-stars engagement metric
-- Comparing Python loops vs Pandas/NumPy vectorization
-- Analyzing programming language popularity
-- Identifying AI-related repositories
-- Visualizing trends using Matplotlib
+* Data cleaning and preprocessing
+* Handling missing values
+* Filtering invalid records
+* Computing a forks-to-stars engagement metric
+* Comparing Python loops vs Pandas/NumPy vectorization
+* Analyzing programming language popularity
+* Identifying AI-related repositories
+* Visualizing trends using Matplotlib
 
 ---
 
 ## Dataset
 
 This project expects a CSV file located at:
-data/github_repos.csv
 
+```
+data/github_repos.csv
+```
 
 The dataset is **not included** in this repository.
 
-**Required columns:**
-- Language
-- Stars
-- Forks
-- Description
+**Required columns**
+
+* Language
+* Stars
+* Forks
+* Description
 
 ---
 
@@ -40,13 +43,28 @@ The dataset is **not included** in this repository.
 
 ### 1) Install dependencies
 
-```bash
+```
 pip install -r requirements.txt
+```
 
 ### 2) Place the dataset
+
 Put your CSV file in:
+
+```
 data/github_repos.csv
+```
 
 ### 3) Run the analysis
-```bash
+
+```
 python src/github_analysis.py
+```
+
+---
+
+## Output
+
+The script will:
+
+* Print dataset summary information

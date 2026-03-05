@@ -1,23 +1,8 @@
-"""
-GitHub Repository Analysis
-
-This script performs exploratory data analysis (EDA) on GitHub repository data,
-including:
-- Data cleaning and preprocessing
-- Loop vs. vectorization performance comparison
-- Language frequency analysis
-- Average stars by language
-- AI-related repository analysis using keyword matching
-- Stars vs. Forks visualization (log scale)
-"""
-
 import time
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
-DATA_PATH = "data/github_repos_sample.csv" # sample of dataset (recommended for GitHub)
-# FULL_PATH = "data/github_repos.csv"      # local dataset (not committed)
+DATA_PATH = "data/github_repos.csv"
 
 df = pd.read_csv(DATA_PATH)
 
@@ -40,16 +25,16 @@ replacement = 'Unknown'
 df['Language'] = df['Language'].fillna(replacement)
 print(df['Language'].isna().sum())
 
-replacement2 = ((df['Stars'] > 0) & (df['Forks'] > 0))
-df = df[replacement2]
+valid = ((df['Stars'] > 0) & (df['Forks'] > 0))
+df = df[valid]
 print("Filtered shape:", df.shape)
 
 # Python Loop vs Vectorization Benchmark
 
-py_ratio = []
-
 stars = df["Stars"].to_list()
 forks = df["Forks"].to_list()
+
+py_ratio = []
 
 start = time.time()
 
